@@ -316,11 +316,11 @@ class Upgrader {
     if (debugDisplayAlways || (debugDisplayOnce && !_hasAlerted)) {
       return true;
     }
-    if (!isUpdateAvailable()) {
-      return false;
-    }
     if (isBlocked) {
       return true;
+    }
+    if (!isUpdateAvailable()) {
+      return false;
     }
     if (isTooSoon() || alreadyIgnoredThisVersion()) {
       return false;
